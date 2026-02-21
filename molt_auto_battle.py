@@ -304,9 +304,9 @@ def step5_wait_final(battle_id: str, voting_battle: dict | None = None) -> dict 
         if remaining > 10:
             log.info(f"  ⏳ Voting berlangsung... {int(remaining)}s lagi")
 
-    # ── Poll hasil — max 8 menit ──────────────────────────────
+    # ── Poll hasil — max 6 menit ──────────────────────────────
     log.info("  🔍 Voting selesai → ambil hasil final...")
-    max_poll = 480
+    max_poll = 360
     elapsed  = 0
     while elapsed < max_poll:
         data = api_get(f"/battles/{battle_id}")
